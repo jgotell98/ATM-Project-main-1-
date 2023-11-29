@@ -1,0 +1,16 @@
+{% extends "administrator/base.html" %}
+{% block content %}
+    <h1> Reset Phone Number </h1>
+    <p class = 'mt-5'> Type in phone number with format '111-111-1111' </p>
+    <form action = '/administrator/reset-phone-number' method = 'POST' class = 'mt-5'> 
+        {% csrf_token %}
+        {{form.as_p}}
+        <button class = 'btn btn-primary' type = 'submit'> Reset </button> 
+    </form>
+    {% if message %}
+    <p class = 'mt-5'> {{message}} </p>
+    {% endif %} 
+    
+    <a href = "{% url 'update-atm-card' %}" class = 'btn btn-primary mt-5'> Back </a> 
+    
+{% endblock content %}

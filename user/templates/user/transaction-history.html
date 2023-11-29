@@ -1,0 +1,32 @@
+{% extends "user/base.html" %}
+{% block content %}
+    <h1> Transaction History </h1>
+    <a href = "{% url 'user-home' %}" class = 'btn btn-primary mt-5'> Back </a> 
+    {% if history %}
+    {% if message %}
+    <p class = 'mt-5'> {{message}} </p>
+    {% endif %} 
+    <table class="table my-5">
+        <thead>
+          <tr>
+            <th scope="col">Transaction Type</th>
+            <th scope="col"> Date </th>
+            <th scope="col"> Location </th>
+            <th scope="col"> Status </th>
+          </tr>
+        </thead>
+
+        {% for transaction in history %}
+            <tbody>
+                <tr>
+                    <td> {{transaction.transaction_type}}</td>
+                    <td> {{transaction.date}} </td>
+                    <td> {{transaction.atm_machine_uid.location}} </td>
+                    <td> {{transaction.status}} </td>
+                </tr>
+            </tbody>
+        {% endfor %}
+        </table>
+    {% endif %}
+
+{% endblock content %}

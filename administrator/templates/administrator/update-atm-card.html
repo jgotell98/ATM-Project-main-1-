@@ -1,0 +1,24 @@
+{% extends "administrator/base.html" %}
+{% block content %}
+    <h1> Update ATM Card </h1>
+    <div class = 'row'> 
+        <div class = 'col'> 
+            <a href = "{% url 'block-atm-card' %}" class = 'btn btn-primary mt-5'> Block ATM Card </a>
+            <a href = "{% url 'activate-atm-card' %}" class = 'btn btn-primary mt-5'> Activate ATM Card </a>
+            <a href = "{% url 'reset-pin' %}" class = 'btn btn-primary mt-5'> Reset PIN </a> 
+            <a href = "{% url 'reset-phone-number' %}" class = 'btn btn-primary mt-5'> Reset Phone Number </a> 
+        </div> 
+    </div> 
+    <div class = 'row mt-5'> 
+        <div class = 'col'> 
+            <a href = "{% url 'view-transaction-history' %}" class = 'btn btn-primary'> View Machine Transaction History </a> 
+            <a href = "{% url 'update-expiration-date' %}" class = 'btn btn-primary'> Update Expiration Date </a> 
+
+        </div> 
+    </div> 
+    <div class = 'row'>
+        <div class = 'col'> 
+            <a href = "{% url 'admin-home' %}" class = 'btn btn-primary mt-5'> Back </a>
+        </div> 
+    </div>
+{% endblock content %}

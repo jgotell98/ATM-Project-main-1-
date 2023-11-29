@@ -1,0 +1,17 @@
+{% extends "user/base.html" %}
+{% block content %}
+    <h1> Cash Transfer </h1>
+    <form action = '/user/cash-transfer' method = 'POST'> 
+        {% csrf_token %} 
+        {{form}}
+        <button class = 'btn btn-primary' type = 'submit'> Transfer </button> 
+    </form>
+    {% if message %}
+    <p class = 'mt-5'> {{message}} </p>
+    {% endif %}
+    <div class = 'row'> 
+        <div class = 'col'> 
+            <a href = "{% url 'user-home' %}" class = 'btn btn-primary mt-5'> Back </a> 
+        </div>
+    </div>  
+{% endblock content %}

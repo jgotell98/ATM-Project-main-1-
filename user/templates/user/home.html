@@ -1,0 +1,19 @@
+{% extends "user/base.html" %}
+{% block content %}
+    <h1> User Home Page </h1>
+    <div class = 'row'> 
+        <div class = 'col'> 
+            <a href = "{% url 'index' %}" class = 'btn btn-primary mt-5'> Home </a> 
+            <a href = "{% url 'cash-transfer' %}" class = 'btn btn-primary mt-5'> Cash Transfer </a>
+            <a href = "{% url 'cash-withdrawal' %}" class = 'btn btn-primary mt-5'> Cash Withdrawal </a> 
+            <a href = "{% url 'balance-inquiry' %}" class = 'btn btn-primary mt-5'> Balance Inquiry </a> 
+        </div>
+    </div> 
+    <div class = 'row'>  
+        <div class = 'col'> 
+            <a href = "{% url 'pin-change' %}" class = 'btn btn-primary mt-5'> PIN Change </a> 
+            <a href = "{% url 'phone-number-change' %}" class = 'btn btn-primary mt-5'> Change Phone Number </a> 
+            <a href = "{% url 'transaction-history' %}" class = 'btn btn-primary mt-5'> Transaction History </a> 
+        </div> 
+    </div> 
+{% endblock content %}

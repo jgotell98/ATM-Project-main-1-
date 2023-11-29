@@ -1,0 +1,10 @@
+{% extends "user/base.html" %}
+{% block content %}
+    <h1> Your Balance </h1>
+    <p>${{user_balance}}</p>
+    <div class = 'row'> 
+        <div class = 'col'> 
+            <a href = "{% url 'user-home' %}" class = 'btn btn-primary mt-5'> Back </a> 
+        </div>
+    </div>  
+{% endblock content %}

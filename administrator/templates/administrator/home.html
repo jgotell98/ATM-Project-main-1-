@@ -1,0 +1,12 @@
+{% extends "administrator/base.html" %}
+{% block content %}
+    <h1> Admin Home Page </h1>
+    <div class = 'row mt-5'> 
+        <div class = 'col'> 
+            <a href = "{% url 'index' %}" class = 'btn btn-primary'> Back </a>
+            <a href = "{% url 'add-atm-card' %}" class = 'btn btn-primary'> Add New ATM Card </a>
+            <a href = "{% url 'atm-machine-status' %}" class = 'btn btn-primary'> View ATM Status </a> 
+            <a href = "{% url 'update-atm-card' %}" class = 'btn btn-primary'> Update ATM Card </a> 
+        </div> 
+    </div> 
+{% endblock content %}

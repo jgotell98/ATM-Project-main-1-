@@ -1,0 +1,30 @@
+{% extends "administrator/base.html" %}
+{% block content %}
+    <h1> ATM Machine Status </h1>
+    <table>
+    <tr>
+        <th>Status</th>
+        <th>Machine ID</th>
+        <th>Current Balance</th>
+        <th>Min. Balance</th>
+        <th>Location</th>
+        <th>Last Refill</th>
+        <th>Next Maintenance</th>
+    </tr>
+    <tr>
+        <th>{{status}}</th>
+        <th>{{machID}}</th>
+        <th>{{balance}}</th>
+        <th>{{minBal}}</th>
+        <th>{{location}}</th>
+        <th>{{refill}}</th>
+        <th>{{maintenance}}</th>
+    </tr>
+    </table>
+    <div class = 'row'>
+        <div class = 'col'> 
+            <a href = "{% url 'admin-home' %}" class = 'btn btn-primary mt-5'> Back </a>
+        </div> 
+    </div>
+        
+{% endblock content %}
